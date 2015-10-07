@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151004220450) do
+ActiveRecord::Schema.define(version: 20151007030310) do
+
+  create_table "bills", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "pay_to"
+    t.string   "description"
+    t.decimal  "amount",      precision: 8, scale: 2
+    t.datetime "date_due"
+  end
 
   create_table "earnings", force: true do |t|
     t.datetime "created_at"
